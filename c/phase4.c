@@ -68,3 +68,115 @@ int main(void) {
 
     return 0;
 }
+
+#include <stdio.h>
+
+int main(void){
+    int total, count;
+    total = 17;
+    count = 5;
+
+    printf("Quotient: %d\n", total/count);
+    printf("Remainder: %d\n", total % count);
+    printf("Average: %f\n", (double) total / count);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(void){
+    double price;
+    int quantity;
+
+    printf("Enter a price: ");
+    scanf("%lf", &price);
+
+    printf("Enter a quantity: ");
+    scanf("%d", &quantity);
+
+    printf("Total: %f\n", price * quantity);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(void){
+    char c;
+
+    printf("Enter a letter: ");
+    scanf(" %c", &c);
+
+    printf("Letter: %c\n", c);
+    printf("Code: %d\n", c);
+    printf("Next: %c\n", c+1);
+
+    return 0;
+
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void){
+    int score;
+    double side;
+    double area;
+
+    score = 80;
+    score += 15;
+    score ++;
+
+    side = 6.0;
+    area = pow(side, 2);
+
+    printf("Score: %d\n", score);
+    printf("Area: %f\n", area);
+    printf("Root: %f\n", sqrt(area));
+
+    return 0;
+}
+
+//Left Number % Right Number
+//The left number is what you are dividing into groups.
+//The right number  is the size of each group.
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    char initial;
+    double a, b, c, d, dx, dy, distance, roundtrip; 
+    int seconds;
+
+    printf("Enter your initial: ");
+    scanf(" %c", &initial);
+
+    printf("Enter the x and y of the startpoints: ");
+    scanf("%lf %lf", &a, &b);
+
+    printf("Enter the x and y of the end point: ");
+    scanf("%lf %lf", &c, &d);
+
+    printf("Enter the trip time in seconds: ");
+    scanf("%d", &seconds);
+
+    printf("Initial: %c\n", initial);
+    printf("Code: %d\n", initial);
+    printf("Next: %c\n", initial + 1);
+
+    dx = c - a; 
+    dy = d - b;
+
+    distance = sqrt(pow(dx, 2) + pow(dy, 2));
+    printf("Distance: %f\n", distance);
+
+    roundtrip = distance * 2;
+    printf("Roundtrip: %f\n", roundtrip);
+
+    printf("Time: %d minutes %d seconds \n", seconds / 60, seconds % 60);
+    printf("Average speed: %f\n", distance / seconds);
+
+    return 0;
+}
